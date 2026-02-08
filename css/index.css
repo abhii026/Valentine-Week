@@ -1,0 +1,27 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #ff6b9d 0%, #c9184a 50%, #ff1744 100%);
+min-height: 100vh; color: white; }
+.container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
+.header { text-align: center; margin-bottom: 60px; animation: fadeInDown 1s ease-out; }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } }
+.header h1 { font-size: 4em; margin-bottom: 15px; text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); }
+.header p { font-size: 1.8em; font-style: italic; }
+.days-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+.day-card { background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 25px; text-align: center;
+text-decoration: none; color: inherit; transition: all 0.4s; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+animation: fadeInUp 1s ease-out backwards; }
+.day-card:nth-child(1) { animation-delay: 0.1s; } .day-card:nth-child(2) { animation-delay: 0.2s; }
+.day-card:nth-child(3) { animation-delay: 0.3s; } .day-card:nth-child(4) { animation-delay: 0.4s; }
+.day-card:nth-child(5) { animation-delay: 0.5s; } .day-card:nth-child(6) { animation-delay: 0.6s; }
+.day-card:nth-child(7) { animation-delay: 0.7s; } .day-card:nth-child(8) { animation-delay: 0.8s; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } }
+.day-card:hover { transform: translateY(-15px) scale(1.05); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3); }
+.day-icon { font-size: 5em; margin-bottom: 20px; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+.day-card h2 { font-size: 2em; color: #c9184a; margin-bottom: 10px; }
+.day-date { font-size: 1.2em; color: #ff4d6d; font-weight: bold; margin: 10px 0; }
+.day-desc { font-size: 1.1em; color: #800f2f; margin-top: 15px; }
+.footer { text-align: center; margin-top: 80px; padding: 40px; }
+.footer p { font-size: 1.4em; margin: 10px 0; }
+.footer strong { font-size: 1.3em; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); }
+@media (max-width: 768px) { .header h1 { font-size: 2.5em; } .days-grid { grid-template-columns: 1fr; } }

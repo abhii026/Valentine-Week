@@ -1,0 +1,72 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #ffe4f1, #ffc4df, #ffb4d6);
+min-height: 100vh; }
+.container { position: relative; min-height: 100vh; }
+.content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+.main-title { text-align: center; font-size: 4em; color: #c9184a; text-shadow: 3px 3px 6px rgba(201, 24, 74, 0.3);
+margin-bottom: 10px; animation: fadeInUp 1s ease-out; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } }
+.date { text-align: center; font-size: 1.5em; color: #c9184a; font-style: italic; margin-bottom: 40px; }
+.message-box { background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; margin: 40px auto;
+max-width: 800px; box-shadow: 0 20px 60px rgba(201, 24, 74, 0.2); }
+.quote { font-size: 1.5em; font-style: italic; color: #c9184a; text-align: center; margin-bottom: 30px; }
+.message { font-size: 1.2em; color: #800f2f; text-align: center; line-height: 2; }
+.kiss-types, .kiss-colors, .love-elements { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px; margin: 50px 0; }
+.kiss-card, .love-card, .teddy-card { background: rgba(255, 255, 255, 0.95); padding: 30px; border-radius: 20px;
+text-align: center; transition: all 0.4s; cursor: pointer; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+.kiss-card:hover, .love-card:hover, .teddy-card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 20px 40px rgba(201, 24, 74, 0.3); }
+.kiss-icon, .love-icon, .mini-teddy { font-size: 3.5em; margin-bottom: 15px; }
+.kiss-card h3, .love-card h3, .teddy-card h3 { color: #c9184a; font-size: 1.5em; margin-bottom: 10px; }
+.kiss-card p, .love-card p, .teddy-card p { color: #800f2f; font-size: 1.1em; }
+.interactive-section { background: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 20px; margin: 50px auto;
+max-width: 800px; box-shadow: 0 20px 60px rgba(201, 24, 74, 0.2); }
+.interactive-section h2 { text-align: center; color: #c9184a; font-size: 2.5em; margin-bottom: 30px; }
+.kiss-sender, .kiss-creator, .valentine-creator, .teddy-sender { display: flex; flex-direction: column; gap: 20px; }
+.kiss-sender input, .kiss-sender select, .kiss-sender textarea,
+.kiss-creator input, .kiss-creator select, .kiss-creator textarea,
+.valentine-creator input, .valentine-creator select, .valentine-creator textarea,
+.teddy-sender input, .teddy-sender select, .teddy-sender textarea {
+padding: 15px; border: 2px solid #ffb3d9; border-radius: 10px; font-size: 1.1em; font-family: inherit; }
+.kiss-sender button, .kiss-creator button, .valentine-creator button, .teddy-sender button {
+padding: 15px 30px; background: linear-gradient(135deg, #ff4d6d, #c9184a); color: white; border: none;
+border-radius: 10px; font-size: 1.3em; cursor: pointer; font-weight: bold; transition: all 0.3s; }
+.kiss-sender button:hover, .kiss-creator button:hover, .valentine-creator button:hover, .teddy-sender button:hover {
+transform: scale(1.05); box-shadow: 0 10px 30px rgba(255, 77, 109, 0.4); }
+.kiss-display, .valentine-display, .teddy-display { margin-top: 30px; padding: 30px; background: rgba(255, 243, 249, 0.8);
+border-radius: 15px; min-height: 100px; display: none; }
+.kiss-display.show, .valentine-display.show, .teddy-display.show { display: block; animation: slideIn 0.5s ease-out; }
+@keyframes slideIn { from { opacity: 0; transform: translateY(20px); } }
+.footer { text-align: center; padding: 40px 20px; margin-top: 50px; }
+.footer p { color: #c9184a; font-size: 1.3em; margin: 10px 0; }
+.footer .creator strong { color: #c9184a; font-size: 1.2em; }
+.kiss-animation, .teddy-bear, .promise-hands, .hug-emoji, .kiss-animation, .heart-animation {
+text-align: center; margin-bottom: 30px; animation: fadeInDown 1.5s ease-out; }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-50px); } }
+.kiss-animation > *, .teddy-bear, .promise-hands > *, .hug-emoji > *, .kiss-animation > *, .heart-animation > * {
+font-size: 5em; animation: float 4s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+@media (max-width: 768px) { .main-title { font-size: 2.5em; }
+.kiss-types, .kiss-colors, .love-elements { grid-template-columns: 1fr; } }
+.back-home {
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #c9184a;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(201, 24, 74, 0.2);
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(201, 24, 74, 0.3);
+    background: white;
+}
